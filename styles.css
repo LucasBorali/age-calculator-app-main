@@ -1,0 +1,165 @@
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-Purple: hsl(251, 100%, 74%);
+  --Light-red: hsl(0, 100%, 67%);
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  color: var(--Off-black);
+  
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--Off-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#container {
+  width: 60%;
+  height: 80%;
+  background: var(--White);
+  margin-top: 3rem;
+  padding: 2.5rem;
+  border-radius: 25px 25px 10rem 25px;
+}
+
+#head {
+  display: flex;
+  gap: 3%;
+  margin-bottom: 10px;
+}
+
+label {
+  width: 20%;
+  color: var(--Smokey-grey);
+  display: block;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.date {
+  width: 100%;
+  height: 3rem;
+  border: 2px solid var(--Light-grey);
+  border-radius: 5px;
+  outline: none;
+  font-size: 2rem;
+  font-weight: 800;
+  display: block;
+  text-align: center;
+}
+
+#arrow {
+  position: relative;
+  height: 5rem;
+  width: 100%;
+}
+
+#line {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--Light-grey);
+  top: 50%;
+  z-index: 0;
+}
+
+button {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--Purple);
+  border-radius: 50%;
+  right: 0%;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--Light-Purple);
+}
+
+#display-age {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 4rem;
+}
+
+#message p {
+  font-size: 3rem;
+}
+
+span {
+  color: var(--Purple);
+}
+
+.attribution {
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 375px) {
+  #container {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  label {
+    width: 40%;
+    font-size: 0.5rem;
+  }
+
+  .date {
+    font-size: 1rem;
+  }
+
+  #arrow {
+    position: relative;
+    justify-content: center;
+    height: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    position: absolute;
+    left: 45%;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .attribution {
+    font-size: 0.7rem;
+  }
+
+  p {
+    font-size: 2.8rem;
+  }
+  #message p {
+    font-size: 2rem;
+  }
+}
